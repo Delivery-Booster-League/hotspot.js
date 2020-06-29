@@ -56,8 +56,8 @@
                 let img = document.createElement('img');
                 img.className = 'overlay-image';
 
-                if (point.customPointer) {
-                    img.src = point.customPointer;
+                if (point.customIcon) {
+                    img.src = point.customIcon;
                 } else {
                     img.src = hotspotDefault;
                 }
