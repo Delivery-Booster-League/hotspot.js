@@ -41,13 +41,19 @@
 
         };
 
-        _hotspotObject.drawPoints = function(points, hotspotDefault) {
+        _hotspotObject.drawPoints = function(points, hotspotDefault, customOnClick) {
             var overlay = document.querySelector('.image-overlay');
             var dataField = document.querySelector('.data');
             points.forEach((point) => {
 
                 let link = document.createElement('a');
-                link.href = point.link;
+                if (customOnClick) {
+                    link.addEventListener('click', function() {
+                        customOnClick(point.link);
+                    });
+                } else {
+                    link.href = point.link;
+                }
                 link.style.left = point.x;
                 link.style.top = point.y;
                 link.title = point.data;

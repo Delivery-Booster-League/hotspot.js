@@ -25,6 +25,8 @@
     const mapWidth = '500';
     const hotspotDefault = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/544303/Target_Logo.svg';
 
+
+
     // init the image
     hotspotJS.init(selector, imgurl, mapWidth);
     // Place your image where you want, kinda like a minimap in a video game
@@ -32,6 +34,13 @@
     hotspotJS.place(selector, 'bottom-right', '10px');
     // draw the hotspots on the image
     hotspotJS.drawPoints(points, hotspotDefault);
+
+    /*
+    const customOnClick = function(idLink) {
+        console.log(idLink);
+    }
+    hotspotJS.drawPoints(points, hotspotDefault, customOnClick);  
+    */
 </script>
 
 </html>
