@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+
+    <div class="imagemap">
+    </div>
+
+</body>
+<!-- example data representing hotspot to place on the map -->
+<script src="data.js"></script>
+<!-- The lib itself -->
+<script src="hotspot.js"></script>
+
+<script type="text/javascript">
+    const imgurl = 'map.jpg';
+    const selector = '.imagemap';
+    const mapWidth = '500';
+    const hotspotDefault = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/544303/Target_Logo.svg';
+
+    // init the image
+    hotspotJS.init(selector, imgurl, mapWidth);
+    // Place your image where you want, kinda like a minimap in a video game
+    // Possible values : 'bottom-right', 'bottom-left', 'top-left', 'top-right'
+    hotspotJS.place(selector, 'bottom-right', '10px');
+    // draw the hotspots on the image
+    hotspotJS.drawPoints(points, hotspotDefault);
+</script>
+
+</html>
