@@ -17,7 +17,7 @@ hotspotJS.init(selector, imgurl, mapWidth);
 // Possible values : 'bottom-right', 'bottom-left', 'top-left', 'top-right'
 hotspotJS.place(selector, 'bottom-right', '10px');
 // draw the hotspots on the image
- hotspotJS.drawPoints(points, hotspotDefault);
+hotspotJS.drawPoints(points, hotspotDefault);
 ```
 
 you can find the complete exemple in the index.html inside this repo
