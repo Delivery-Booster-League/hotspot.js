@@ -74,6 +74,11 @@
             });
         };
 
+        _hotspotObject.clear = function(selector) {
+            var container = document.querySelector(selector);
+            container.innerHTML = '';
+        }
+
         return _hotspotObject;
     }
 
